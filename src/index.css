@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    .bg-nav {
+        background-color: rgba(17, 24, 39, .9);
+    }
+
+    .nav-respon {
+        background-color: rgba(255, 255, 255, .1);
+        backdrop-filter: blur(3px);
+    }
+
+    .prof-shadow {
+        border-radius: 100%;
+        box-shadow: 0px 0px 31px 16px rgba(0,0,0,0.1);
+    }
+}
