@@ -1,7 +1,6 @@
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import Gallery from "../components/Gallery";
-import Socmed from "../components/Socmed";
 
 const Home = () => {
   return (
@@ -11,7 +10,6 @@ const Home = () => {
         <div className="">
           <Gallery/>
           <Hero/>
-          <Socmed/>
         </div>
       </section>
     </>

@@ -1,7 +1,8 @@
 import Home from "./pages/Home";
 import About from "./pages/About";
+import Project from "./pages/Project";
+import Blog from "./pages/Blog";
 import Loading from "./components/Loading";
-import Socmed from "./components/Socmed";
 import { useEffect, useState } from "react";
 
 const App = () => {
@@ -19,6 +20,8 @@ const App = () => {
       {loading ? <Loading/> : (<div>
         <Home/>
         <About/>
+        <Project/>
+        <Blog/>
       </div>)}
     </>
   );

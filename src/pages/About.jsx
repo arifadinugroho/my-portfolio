@@ -4,7 +4,7 @@ import Intro from "../components/Intro";
 const About = () => {
   return (
     <>
-      <section className="bg-slate-100 border-t-2 border-solid">
+      <section className="bg-gradient-to-b from-slate-100 to-slate-300 h-screen">
         <h1 className="text-2xl text-center">About me</h1>
         <Profile />
         <Intro />

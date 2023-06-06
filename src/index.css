@@ -6,14 +6,31 @@
     .bg-nav {
         background-color: rgba(17, 24, 39, .9);
     }
+    
+    .move-nav {
+        animation: move linear .2s;
+    }
+    @keyframes move {
+        from {
+            transform: translateX(100%);
+        }
+        to {
+            transform: translateX(0%);
+        }
+    }
 
     .nav-respon {
         background-color: rgba(255, 255, 255, .1);
         backdrop-filter: blur(3px);
     }
 
+    .text-shadow {
+        text-shadow: 0 0 10px rgba(17, 24, 39, .9);
+    }
+
     .prof-shadow {
         border-radius: 100%;
-        box-shadow: 0px 0px 31px 16px rgba(0,0,0,0.1);
+        border: 2px solid #0ff;
+        box-shadow: 0 0 10px #0ff;
     }
 }

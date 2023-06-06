@@ -34,26 +34,26 @@ const Navbar = () => {
               <a href="/notfound">About</a>
             </li>
             <li className="pr-6">
-              <a href="/notfound">Contact</a>
+              <a href="/notfound">Projects</a>
             </li>
             <li className="pr-6">
               <a href="/notfound">Blogs</a>
             </li>
             <li className="pr-6">
-              <a href="/notfound">Projects</a>
+              <a href="/notfound">Contact</a>
             </li>
           </ul>
         </div>  
         <button className="text-4xl md:hidden" onClick={toggleMenu}>{isOpen ? <IoClose/> : <IoMenu/>}</button>
         {isOpen && ( <>
           <div className="absolute top-[59px] right-0 font-bold text-slate-100 w-screen h-screen text-start nav-respon" onClick={toggleMenu}>
-            <div className="w-2/5 h-screen absolute right-0 bg-nav">
+            <div className="w-2/5 h-screen absolute right-0 bg-nav move-nav">
             <ul className="text-xl">
               <li className="p-2 border-b-2 border-gray-900"><a href="/">Home</a></li>
               <li className="p-2 border-b-2 border-gray-900"><a href="/notfound">About</a></li>
-              <li className="p-2 border-b-2 border-gray-900"><a href="/notfound">Contact</a></li>
-              <li className="p-2 border-b-2 border-gray-900"><a href="/notfound">Blogs</a></li>
               <li className="p-2 border-b-2 border-gray-900"><a href="/notfound">Projects</a></li>
+              <li className="p-2 border-b-2 border-gray-900"><a href="/notfound">Blogs</a></li>
+              <li className="p-2 border-b-2 border-gray-900"><a href="/notfound">Contact</a></li>
             </ul>
             <ul className="flex gap-1">
               <li className="p-2 bg-green-500 rounded-full"><a href=""><FaWhatsapp className="text-3xl"/></a></li>
