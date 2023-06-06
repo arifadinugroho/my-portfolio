@@ -5,7 +5,7 @@ const Hero = () => {
 
   return (
     <>
-        <div className="absolute top-[60%] min-w-[640px] pl-4 md:pl-10 md:top-1/3">
+        <div className="absolute top-[60%] pl-4 md:pl-10 md:top-1/3">
           <h3 className="text-2xl font-bold">Hallo my name is</h3>
           <h1 className="text-[45px] font-bold sm:text-6xl">
             Arif Adi Nugroho
