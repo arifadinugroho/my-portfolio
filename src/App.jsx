@@ -4,6 +4,7 @@ import Project from "./pages/Project";
 import Blog from "./pages/Blog";
 import Loading from "./components/Loading";
 import { useEffect, useState } from "react";
+import Footer from "./pages/Footer";
 
 const App = () => {
 
@@ -22,6 +23,7 @@ const App = () => {
         <About/>
         <Project/>
         <Blog/>
+        <Footer/>
       </div>)}
     </>
   );

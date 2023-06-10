@@ -1,7 +1,7 @@
 const Blog = () => {
     return ( 
         <>
-            <section className="h-screen bg-gradient-to-b from-slate-500 to-slate-700">
+            <section className="h-screen bg-blog">
                 Hello
             </section>
         </>

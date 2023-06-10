@@ -4,12 +4,10 @@ import Intro from "../components/Intro";
 const About = () => {
   return (
     <>
-      <section className="bg-gradient-to-b from-slate-100 to-slate-300 h-screen">
-        <h1 className="text-2xl text-center">About me</h1>
+      <section className="h-screen bg-gradient-to-br from-gray-950 to-gray-800">
+        <h1 className="text-center text-4xl font-bold"><span className="text-teal-500">About me</span>🫅</h1>
         <Profile />
         <Intro />
-        <div className="relative -bottom-2/3">
-        </div>
       </section>
     </>
   );
