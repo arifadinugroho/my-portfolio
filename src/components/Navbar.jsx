@@ -34,9 +34,6 @@ const Navbar = () => {
               <a href="/notfound">About</a>
             </li>
             <li className="pr-6 transition-all duration-500 hover:text-shadow">
-              <a href="/notfound">Projects</a>
-            </li>
-            <li className="pr-6 transition-all duration-500 hover:text-shadow">
               <a href="/notfound">Blogs</a>
             </li>
             <li className="pr-6 transition-all duration-500 hover:text-shadow">
@@ -51,7 +48,6 @@ const Navbar = () => {
             <ul className="text-xl">
               <li className="p-2 transition-all duration-500 hover:text-teal-500"><a href="/">Home</a></li>
               <li className="p-2 transition-all duration-500 hover:text-teal-500"><a href="/notfound">About</a></li>
-              <li className="p-2 transition-all duration-500 hover:text-teal-500"><a href="/notfound">Projects</a></li>
               <li className="p-2 transition-all duration-500 hover:text-teal-500"><a href="/notfound">Blogs</a></li>
               <li className="p-2 transition-all duration-500 hover:text-teal-500"><a href="/notfound">Contact</a></li>
             </ul>

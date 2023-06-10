@@ -1,4 +1,5 @@
 import React from "react";
+import {FaGithub, FaLinkedinIn} from 'react-icons/fa'
 
 const Hero = () => {
 
@@ -9,13 +10,10 @@ const Hero = () => {
           <h3 className="text-[25px] md:text-4xl font-semibold text-gray-500 leading-none">Hallo my name is</h3> 
           <h1 className="text-teal-500 font-bold text-[40px] md:text-7xl leading-none">Arif Adi Nugroho.</h1>
           <p className="text-[25px] md:text-4xl font-semibold text-gray-500 leading-none">I'm a Full Snack Provider</p>
-          <ul className="flex pt-3">
-            <li className="py-2 px-4 mr-2 bg-gray-950 text-teal-500 border-2 border-solid border-gray-950 rounded-md shadow-md transition-all duration-500 hover:box-shadow">
-              <a href="/notfound">About me</a>
-            </li>
-            <li className="py-2 px-4 border-2 border-solid border-teal-500 text-teal-500 rounded-md transition-all duration-500 hover:box-shadow">
-              <a href="/notfound">Portfolio</a>
-            </li>
+          <ul className="flex mt-2">
+            <li className="w-fit py-2 px-4 border-2 border-solid border-teal-500 text-teal-500 rounded-md transition-all duration-500 hover:box-shadow"><a href="">Portfolio</a></li>
+            <li className="text-gray-500 text-3xl pt-2 pl-4 transition-all duration-500 hover:text-teal-500"><a href=""><FaGithub/></a></li>
+            <li className="text-gray-500 text-3xl pt-2 pl-4 transition-all duration-500 hover:text-teal-500"><a href=""><FaLinkedinIn/></a></li>
           </ul>
         </div>
     </>

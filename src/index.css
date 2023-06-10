@@ -15,10 +15,4 @@
     .box-shadow {
         box-shadow: 0 0 10px;
     }
-
-    .prof-shadow {
-        border-radius: 100%;
-        border: 2px solid #0ff;
-        box-shadow: 0 0 10px #0ff;
-    }
 }
