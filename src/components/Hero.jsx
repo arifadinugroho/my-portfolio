@@ -1,23 +1,29 @@
 import React from "react";
-import {FaGithub, FaLinkedinIn} from 'react-icons/fa'
+import {FaWhatsapp, FaInstagram, FaFacebookF} from "react-icons/fa"
+import "animate.css"
 
-const Hero = () => {
+const Hero = ({name, Transition}) => {
 
+    const Socmeds = [
+        {icon: <FaWhatsapp/>, link: "https://api.whatsapp.com/send/?phone=6282110199768&text&type=phone_number&app_absent=0", id: 1},
+        {icon: <FaInstagram/>, link: "https://www.instagram.com/arrif.adi/?hl=id", id: 2},
+        {icon: <FaFacebookF/>, link: "https://www.facebook.com/profile.php?id=100082183115290", id: 3}
+    ]
 
-  return (
-    <>
-        <div className="absolute top-[70%] pl-4 md:pl-10 md:top-1/3">
-          <h3 className="text-[25px] md:text-4xl font-semibold text-gray-500 leading-none">Hallo my name is</h3> 
-          <h1 className="text-teal-500 font-bold text-[40px] md:text-7xl leading-none">Arif Adi Nugroho.</h1>
-          <p className="text-[25px] md:text-4xl font-semibold text-gray-500 leading-none">I'm a Full Snack Provider</p>
-          <ul className="flex mt-2">
-            <li className="w-fit py-2 px-4 border-2 border-solid border-teal-500 text-teal-500 rounded-md transition-all duration-500 hover:box-shadow"><a href="">Portfolio</a></li>
-            <li className="text-gray-500 text-3xl pt-2 pl-4 transition-all duration-500 hover:text-teal-500"><a href=""><FaGithub/></a></li>
-            <li className="text-gray-500 text-3xl pt-2 pl-4 transition-all duration-500 hover:text-teal-500"><a href=""><FaLinkedinIn/></a></li>
-          </ul>
-        </div>
-    </>
-  );
-};
-
+    return ( 
+        <>
+            <div className="text-slate-500 text-center md:text-start">
+                <h3 className="text-xl md:text-2xl">Hello everyone I am <br /> <span className="font-mono text-shadow text-[40px] md:text-6xl text-fuchsia-500">{name}</span></h3>
+                <ul className="flex justify-center md:justify-normal py-4 gap-6">
+                    {
+                        Socmeds.map(socmed => (
+                            <li key={socmed.id}><a href={socmed.link} className={`text-3xl ${Transition} hover:text-fuchsia-500`}>{socmed.icon}</a></li>
+                        ))
+                    }
+                </ul>
+            </div>
+        </>
+     );
+}
+ 
 export default Hero;
