@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,13 +6,11 @@
 
 @layer base {
     *, html, body {
-        font-family: 'Poppins', sans-serif;
+        font-family: 'Roboto', sans-serif;
     }
 
-    .text-shadow {
-        text-shadow: 0 0 20px;
+    body {
+        color: white;
+        background-color: rgb(9, 9, 11);
     }
-
-    
-
 }

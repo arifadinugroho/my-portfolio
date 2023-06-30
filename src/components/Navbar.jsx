@@ -1,36 +1,66 @@
-import React, {useState} from "react";
-import {IoClose, IoMenu} from "react-icons/io5"
+import React, {useState, useEffect} from "react";
+import {IoSunny, IoMoon, IoReorderThree} from "react-icons/io5";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
-const Navbar = ({name, Links, Transition}) => {
+const Navbar = () => {
 
-  const [navbarColor, setNavbarColor] = useState(false)
-  const [isOpen, setIsOpen] = useState(false)
+    const Links = [
+        {name: "Home", link: "/"},
+        {name: "About", link: "/"},
+        {name: "Projects", link: "/"},
+        {name: "Contact", link: "/"}
+    ];
 
-  const changeNavbarColor = () => {
-    if (window.scrollY) {
-      setNavbarColor(true)
-    } else {
-      setNavbarColor(false)
+    const transition = "transition-all duration-500 ease-in-out"
+
+    const [isOpen, setIsOpen] = useState(false)
+    const [theme, setTheme] = useState(false)
+    const [navColor, setNavColor] = useState(false)
+
+    useEffect(() => {
+        AOS.init({
+            once: false,
+            duration: 500
+        })
+    }, []);
+
+    const changeBG = () => {
+        if (window.scrollY >= 20) {
+            setNavColor(true);
+        } else {
+            setNavColor(false);
+        }
     }
-  }
 
-  window.addEventListener('scroll', changeNavbarColor)
-  
-  return ( 
-    <>
-      <nav className={`flex fixed w-full justify-between py-2 border-b-[1px] border-slate-500 z-50 ${Transition} ${navbarColor ? `bg-black bg-opacity-80` : `bg-transparent`}`}>
-        <h1 className={`text-3xl md:text-4xl font-mono text-fuchsia-500 pl-4 md:pl-10 z-50`}>{name}</h1>
-        <button onClick={() => setIsOpen(!isOpen)} className={`md:hidden text-3xl text-slate-500 ${Transition} hover:text-fuchsia-500 absolute right-4 top-3 z-50`}>{isOpen ? <IoClose/> : <IoMenu/>}</button>
-        <ul className={`md:flex text-center w-3/4 md:w-fit md:h-0 gap-6 absolute right-0 md:right-10 top-28 md:top-2 border-2 border-fuchsia-500 shadow-md shadow-fuchsia-500 bg-black bg-opacity-90 md:bg-none rounded-lg z-50 md:border-none md:translate-x-0 ${Transition} ${isOpen ? `translate-x-0` : `translate-x-[100rem]`}`}>
-          {
-            Links.map(link => (
-              <li key={link.id} className={`pl-5 md:pl-0`} onClick={() => setIsOpen(!isOpen)}><a href={link.link} className={`text-xl block text-slate-100 ${Transition} hover:text-fuchsia-500 py-2`}>{link.name}</a></li>
-              ))
-            }
-        </ul>
-      </nav>
-    </>
-   );
+    window.addEventListener('scroll', changeBG);
+
+    const body = document.body;
+
+    return ( 
+        <>
+            <nav className={`flex justify-between fixed w-full py-3 px-4 md:px-10 ${transition} ${navColor ? "backdrop-blur-sm" : "bg-transparent"}`}>
+                <div data-aos="fade-down">
+                    <h1 className="text-2xl">
+                        <a href="/">Arif Adi Nugroho</a>
+                    </h1>
+                </div>
+                <div data-aos="fade-down">
+                    <div className="flex gap-4 md:gap-10 mt-1">
+                        <button className="text-2xl" onClick={() => {setTheme(!theme)}}>{theme ? <IoMoon/> : <IoSunny/>}</button>
+                        <button className="md:hidden text-2xl active:border-[1px] active:rounded-[5px] active:border-teal-500" onClick={() => {setIsOpen(!isOpen)}}><IoReorderThree/></button>
+                        <ul className={`md:flex absolute h-40 md:h-fit top-14 right-1 md:static gap-6 md:text-lg bg-black shadow-md shadow-black md:shadow-none rounded-2xl md:bg-transparent w-56 md:w-fit md:translate-x-0 ${transition} ${isOpen ? "translate-x-0" : "translate-x-[100rem]"}`}>
+                            {
+                                Links.map(link => (
+                                    <li><a href={link.link} className={`md:mx-0 mx-2 block p-2 md:p-0 md:border-none ${transition} hover:text-teal-500`}>{link.name}</a></li>
+                                    ))
+                                }
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </>
+     );
 }
  
 export default Navbar;

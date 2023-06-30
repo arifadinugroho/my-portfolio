@@ -1,4 +1,4 @@
-const Loading = () => {
+const Gallery = () => {
     return ( 
         <>
             
@@ -6,4 +6,4 @@ const Loading = () => {
      );
 }
  
-export default Loading;
+export default Gallery;
